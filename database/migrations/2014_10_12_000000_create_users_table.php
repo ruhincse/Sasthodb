@@ -14,15 +14,28 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
+            $table->bigIncrements('id');
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->string('email')->unique();            
+            $table->integer('role_id');
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            $table->string('password');            
+            $table->string('status')->default(1);
             $table->rememberToken();
             $table->timestamps();
         });
     }
+
+        // Role_id
+
+        // Admin=1,
+        // Manager=2,
+        // agent=3,
+        // Customer=4,
+        // blood donar=5
+
+
 
     /**
      * Reverse the migrations.

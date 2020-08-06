@@ -18,10 +18,20 @@ class RedirectIfAuthenticated
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        if (Auth::guard($guard)->check()) {
-            return redirect(RouteServiceProvider::HOME);
-        }
-
-        return $next($request);
+        if (Auth::guard($guard)->check() && Auth::user()->role_id  ==1) {
+            return redirect()->route('admin.dashboard');
+            }elseif(Auth::guard($guard)->check() && Auth::user()->role_id ==2){
+            return redirect()->route('manager.dashboard');
+            }elseif(Auth::guard($guard)->check() && Auth::user()->role_id ==3){
+            return redirect()->route('agent.dashboard');
+            }elseif(Auth::guard($guard)->check() && Auth::user()->role_id ==4){
+            return redirect()->route('customer.dashboard');
+            }elseif(Auth::guard($guard)->check() && Auth::user()->role_id ==5){
+                return redirect()->route('donar.dashboard');
+                }           
+            else{
+            
+            return $next($request);
+            }
     }
 }
