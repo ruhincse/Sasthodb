@@ -24,14 +24,14 @@
                         Main
                     </li>
 
-                    <li class="nav-item mm-active">
+                    <li class="nav-item">
                         <a href="#" class="collapsed-nav-link nav-link" aria-expanded="false">
                             <span class="icon"><i class='bx bx-home-circle'></i></span>
                             <span class="menu-title">Dashboard</span>
                             <span class="badge">2</span>
                         </a>
 
-                        <ul class="sidemenu-nav-second-level">
+                        <!-- <ul class="sidemenu-nav-second-level">
                             <li class="nav-item">
                                 <a href="dashboard-analytics.html" class="nav-link">
                                     <span class="icon"><i class='bx bx-analyse'></i></span>
@@ -39,20 +39,37 @@
                                 </a>
                             </li>
         
-                            <li class="nav-item mm-active">
+                            <li class="nav-item">
                                 <a href="dashboard-ecommerce.html" class="nav-link">
                                     <span class="icon"><i class='bx bxs-shopping-bag'></i></span>
                                     <span class="menu-title">eCommerce</span>
                                 </a>
                             </li>
-                        </ul>
+                        </ul> -->
                     </li>
 
                     <li class="nav-item-title">
-                        Apps
+                        Basic Web Settings
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a href="{{route('admin.area.index')}}" class="nav-link">
+                            <span class="icon"><i class='bx bx-badge-check'></i></span>
+                            <span class="menu-title">Area Section</span>
+                        </a>
                     </li>
 
                     <li class="nav-item">
+                        <a href="{{route('admin.agent.index')}}" class="nav-link">
+                            <span class="icon"><i class='bx bxs-user-check'></i></span>
+                            <span class="menu-title">Agent Section</span>
+                        </a>
+                    </li>
+
+
+
+                    <!-- <li class="nav-item">
                         <a href="#" class="collapsed-nav-link nav-link" aria-expanded="false">
                             <span class="icon"><i class='bx bx-envelope'></i></span>
                             <span class="menu-title">Email</span>
@@ -81,26 +98,16 @@
                                 </a>
                             </li>
                         </ul>
-                    </li>
+                    </li> -->
+
+                   
+
+                  
 
                     <li class="nav-item">
-                        <a href="app-chat.html" class="nav-link">
-                            <span class="icon"><i class='bx bx-message'></i></span>
-                            <span class="menu-title">Chat</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="app-todo.html" class="nav-link">
-                            <span class="icon"><i class='bx bx-badge-check'></i></span>
-                            <span class="menu-title">Todo</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="app-calendar.html" class="nav-link">
-                            <span class="icon"><i class='bx bx-calendar'></i></span>
-                            <span class="menu-title">Calendar</span>
+                        <a href="{{route('admin.category.index')}}" class="nav-link">
+                            <span class="icon"><i class='bx bx-transfer'></i></span>
+                            <span class="menu-title">Category</span>
                         </a>
                     </li>
 

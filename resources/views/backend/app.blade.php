@@ -15,6 +15,7 @@
         <title>@yield('title','Dashboard')</title>
 
         <link rel="icon" type="image/png" href="{{asset('backend/assets/img/favicon.png')}}">
+        <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
         @stack('css')
     </head>
 
@@ -57,6 +58,26 @@
         <script src="{{asset('backend/assets/js/vendors.min.js')}}"></script>
 
 
+
+        <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+       
+       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>      
+      
+       {!! Toastr::message() !!}
+      
+      
+      
+      <script>
+       @if($errors->any())
+              @foreach($errors->all() as $error)
+                    toastr.error('{{ $error }}','Error',{
+                        closeButton:true,
+                        progressBar:true,
+                     });
+              @endforeach
+          @endif
+      </script>
+      
 
         @stack('js')
       

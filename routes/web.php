@@ -28,7 +28,11 @@ Route::group(['as'=>'admin.','prefix'=>'admin','namespace'=>'Admin','middleware'
 
     Route::get('dashboard','DashboardController@index')->name('dashboard');
 
+    Route::resource('area','AreaController');
+    Route::resource('agent','AgentController');
+    Route::resource('category','CategoryController');
 
+    
 });
 /*Admin Route End here*/
 
@@ -85,7 +89,4 @@ Route::group(['as'=>'donar.','prefix'=>'donar','namespace'=>'Donar','middleware'
 
 
 
-Route::get('check-dashboard',function(){
-
-    return view('backend.index');
-});
+ 
