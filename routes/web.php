@@ -31,6 +31,7 @@ Route::group(['as'=>'admin.','prefix'=>'admin','namespace'=>'Admin','middleware'
     Route::resource('area','AreaController');
     Route::resource('agent','AgentController');
     Route::resource('category','CategoryController');
+    Route::resource('product','ProductController');
 
     
 });

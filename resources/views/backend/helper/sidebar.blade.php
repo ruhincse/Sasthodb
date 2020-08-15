@@ -111,6 +111,17 @@
                         </a>
                     </li>
 
+
+
+                    <li class="nav-item">
+                        <a href="{{route('admin.product.index')}}" class="nav-link">
+                            <span class="icon"><i class='bx bx-grid-alt'></i></span>
+                            <span class="menu-title">Product</span>
+                        </a>
+                    </li>
+
+
+
                     <li class="nav-item-title">
                         UI Elements
                     </li>

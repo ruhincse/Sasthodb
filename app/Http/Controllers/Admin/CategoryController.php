@@ -53,7 +53,7 @@ class CategoryController extends Controller
 
         // return view('backend.admin.area.index',compact('datas'));
 
-        return $this->index();
+        return redirect()->route('admin.category.index');
     }
 
     /**
